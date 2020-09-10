@@ -11,6 +11,16 @@ exports.up = function (knex) {
             tbl.string('ingredient_name').notNullable()
 
         })
+        .createTable('steps', tbl => {
+            tbl.increments()
+            tbl.text('step').notNullable()
+            tbl.integer('recipe_id')
+            .unsigned()
+            .notNullable()
+            .references('recipes.id')//shorthand
+            .onDelete('RESTRICT')
+            .onUpdate('CASCADE')
+        })
         .createTable('recipes_ingredients', tbl => {
             tbl.increments()
 
