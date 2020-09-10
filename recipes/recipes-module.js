@@ -28,5 +28,11 @@ function getShoppingList(recipe_id) {
 }
 // should return a list of step by step instructions for preparing a recipe
 function getInstructions(recipe_id) {
-
+    /*
+        select *
+        from steps
+        where recipe_id = 1
+        order by [order]
+        ;
+    */
 }
