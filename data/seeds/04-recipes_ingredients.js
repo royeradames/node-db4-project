@@ -5,7 +5,7 @@ exports.seed = function (knex, Promise) {
     {
       recipe_id: 1,
       ingredient_id: 1,
-      require_quantity: 2,
+      quantity: 2,
     },
     {
       recipe_id: 1,
