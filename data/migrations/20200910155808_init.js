@@ -12,7 +12,7 @@ exports.up = function (knex) {
         })
         .createTable('steps', tbl => {
             tbl.increments()
-            tbl.text('step').notNullable()
+            tbl.text('step', 'mediumtext').notNullable()
             tbl.integer('recipe_id')
             .unsigned()
             .notNullable()
