@@ -20,7 +20,6 @@ router.get('/', (req, res) => {
 router.get('/:id/shoppingList', (req, res) => {
     Recipes.getShoppingList(req.params.id)
         .then(shoppingList => {
-            console.log(shoppingList)
             if (shoppingList.length) {
                 res.status(200).json(shoppingList)
             } else {
@@ -35,9 +34,10 @@ router.get('/:id/shoppingList', (req, res) => {
 router.get('/:id/instructions', (req, res) => {
     Recipes.getInstructions(req.params.id)
         .then(intructions => {
-            intructions
+            
+            // console.log(intructions)
             if (intructions.length) {
-                res.status(200).json(instructions)
+                res.status(200).json(intructions)
             } else {
                 res.status(400).json({ error: 'Cannot find that recipe instructions.' })
 
