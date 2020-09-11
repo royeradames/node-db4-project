@@ -12,7 +12,7 @@ function getRecipes() {
         from recipes
         ;
     */
-
+    return db('recipes')
 }
 // should return a list of all ingredients and quantities for a given recipe
 function getShoppingList(recipe_id) {
