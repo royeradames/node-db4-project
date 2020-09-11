@@ -27,7 +27,7 @@ function getShoppingList(recipe_id) {
     return db('ingredients as i')
     .join('recipes_ingredients as ri', 'i.id', 'ri.ingredient_id')
     .where('recipe_id', recipe_id)
-    .select('i.ingredient_name','ri.quantity')
+    .select('i.id','i.ingredient_name','ri.quantity')
 }
 // should return a list of step by step instructions for preparing a recipe
 function getInstructions(recipe_id) {
