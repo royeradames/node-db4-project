@@ -1,4 +1,4 @@
-const express = require('express');
+const express = require('express')
 const Recipes = require('./recipes-module')
 const router = express.Router()
 
