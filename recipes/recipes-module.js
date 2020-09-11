@@ -1,6 +1,6 @@
 const db = require('../data/db-config.js');
 
-module.imports = {
+module.exports = {
     getRecipes,
     getShoppingList,
     getInstructions,
